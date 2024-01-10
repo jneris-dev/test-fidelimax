@@ -6,7 +6,7 @@ export function Header(props) {
                     <img src="menu.svg" alt="" />
                     <img src="logo.svg" alt="" />
                 </figure>
-                <div class="flex items-center gap-4 text-white text-sm">
+                <div className="flex items-center gap-4 text-white text-sm">
                     <img className="w-10 h-10 rounded-full" src="user.png" alt="" />
                     <p>Nome do Usuário Aqui</p>
                     <button> <img src="arrow.svg" alt="" /></button>

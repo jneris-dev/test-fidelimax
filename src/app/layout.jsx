@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           src="https://kit.fontawesome.com/51fa49c79f.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </head>
       <body className={poppins.className}>

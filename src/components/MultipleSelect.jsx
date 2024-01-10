@@ -6,7 +6,7 @@ export function MultipleSelect(props) {
             </label>
             <div className="flex flex-wrap gap-4">
                 {props.options.map((item, key) => (
-                    <div>
+                    <div key={key}>
                         <input className="peer sr-only" id={item.id} type="checkbox" tabIndex="-1" />
 
                         <label
@@ -14,7 +14,7 @@ export function MultipleSelect(props) {
                             className="block w-full rounded-2xl border border-gray-2 p-3"
                             tabIndex="0"
                         >
-                            <span key={key} value={item.value} label={item.label}>{item.label}</span>
+                            <span value={item.value} label={item.label}>{item.label}</span>
                         </label>
                     </div>
                 ))}
