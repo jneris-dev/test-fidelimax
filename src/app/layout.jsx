@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={poppins.className}>
-        <Script src="https://third-party-script.js" async />
+        <Script src="https://third-party-script.js"></Script>
         {children}
       </body>
     </html>
