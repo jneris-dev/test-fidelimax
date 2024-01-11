@@ -16,7 +16,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <Script src="https://third-party-script.js" async />
       <head>
         <script
           src="https://kit.fontawesome.com/51fa49c79f.js"
@@ -24,6 +23,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={poppins.className}>
+        <Script src="https://third-party-script.js" async />
         {children}
       </body>
     </html>
