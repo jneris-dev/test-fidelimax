@@ -36,7 +36,7 @@ export const optionCheckbox = [
         value: "8",
     },
     {
-        label: "OPÇ 10",
+        label: "OPC 10",
         value: "9",
     },
 ]
