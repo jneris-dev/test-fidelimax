@@ -17,13 +17,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <head>
+        <Script src="https://third-party-script.js" async />
+        <Script src="https://third-party-script.js" defer />
         <script
           src="https://kit.fontawesome.com/51fa49c79f.js"
           crossOrigin="anonymous"
         ></script>
       </head>
       <body className={poppins.className}>
-        <Script src="https://third-party-script.js"></Script>
         {children}
       </body>
     </html>
