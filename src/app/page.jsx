@@ -1,5 +1,5 @@
 "use client"
-
+import Script from 'next/script'
 import { Rating } from "@/components/Rating";
 import { Button } from "@/components/Button";
 import { Radio } from "@/components/Radio";
@@ -14,6 +14,7 @@ import { optionMultipleSelect } from "@/util/optionMultipleSelect";
 import { Check } from "@/components/Check";
 import { optionCheckbox } from "@/util/optionCheckbox";
 import { useState } from "react";
+
 
 export default function Home() {
   const [fields, setFields] = useState({
@@ -50,6 +51,7 @@ export default function Home() {
 
   return (
     <article>
+      <Script src="https://third-party-script.js" async />
       <Header />
       <section className="md:px-4 mx-auto py-10 sm:w-full md:max-w-2xl">
         <h1 className="text-3xl text-center md:text-start lg:text-[40px] text-white font-semibold pb-5">Pesquisa de Satisfação</h1>
