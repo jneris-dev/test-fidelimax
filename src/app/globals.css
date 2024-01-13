@@ -10,3 +10,23 @@ body {
 	background-repeat: no-repeat;
 	background-color: #F2F4F8;
 }  
+
+:root {
+	--rater-gold: orange;
+  }
+
+.App {
+	color: black;
+	font-family: system-ui, sans-serif;
+	text-align: center;
+  }
+  
+  .rater {
+	display: flex;
+	cursor: pointer;
+  }
+  
+  .rater__star {
+	color: gray;
+  }
+  

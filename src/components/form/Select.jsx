@@ -25,7 +25,6 @@ export function Select(props) {
                 id={props.id}
                 value={props.value}
                 onChange={props.onChange}
-                disabled={props.disabled}
                 required={props.required}
                 className="w-full block p-2.5 text-sm border border-gray-4 rounded-lg"
             >
