@@ -33,14 +33,25 @@ export default function Home() {
         const response = await axios.get('https://fdlmx-backgrounds.sfo3.digitaloceanspaces.com/front-test/survey.json');
         setQuestions(response.data);
         if (response.status === 200) {
+          const dataSix = response.data.itens[5].itens
+          const dataSeven = response.data.itens[6].itens
+
+          dataSix.forEach(object => {
+            delete object['description']
+          })
+
+          dataSeven.forEach(object => {
+            delete object['description']
+          })
+
           if (Object.keys(response.data).length !== 0) {
             setFields({
               ...fields,
               one: response.data.itens[0].answerValue,
               two: response.data.itens[1].answerValue,
               five: response.data.itens[4].answerValue,
-              six: response.data.itens[5].itens,
-              seven: response.data.itens[6].itens,
+              six: dataSix.map(e => e.value),
+              seven: dataSeven.map(e => e.value),
               eight: response.data.itens[7].answerValue,
             })
           } else {
@@ -84,7 +95,7 @@ export default function Home() {
     };
 
     const handleMultipleSelect = (e) => {
-      const value = e.target.value;
+      const value = Number(e.target.value);
 
       if (fields.six.includes(value)) {
         fields.six = fields.six.filter((cur) => cur !== value)
